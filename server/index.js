@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 //DB connection
 mongoose.connect('mongodb://localhost:auth/mongotest');
 
+//Middleware
 app.use(bodyParser.json({ type: '*/*'}));
 router(app);
 
