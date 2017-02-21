@@ -11,7 +11,7 @@ var localOptions = { usernameField: 'email'};
 
 var localLogin = new LocalStrategy(localOptions, function(email, password, done){
 	User.findOne({ email: email }, function(err, user){
-		if(err) { return done(err);}
+		if(err) { return done(err)};
 		if(!user) { return done(null, false);}
 
 		//compare passwords - is 'password' equal to user.password?

@@ -16,12 +16,6 @@ exports.signup = function(req, res, next){
 		return res.status(418).send({error: "You must provide email and password."});
 	}
 
-exports.signin = function(req, res, next){
-	//User has already had their email and pw auth'd
-	// we just need to give them a token
-	res.send({ token: createUserToken(req.user) });
-}
-
 	//2
 	User.findOne({ email: email }, function(err, existingUser){
 		if(err) {
@@ -49,4 +43,10 @@ exports.signin = function(req, res, next){
 		res.json({ token: createUserToken(user)});
 		});
 	});
+}
+
+exports.signin = function(req, res, next){
+	//User has already had their email and pw auth'd
+	// we just need to give them a token
+	res.send({ token: createUserToken(req.user) });
 }
