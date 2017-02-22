@@ -6,6 +6,7 @@ import NavBarHeader from './nav';
     			return (
       				<div>
       					<NavBarHeader />
+      					<Video />
       				</div>
     			);
   		}
