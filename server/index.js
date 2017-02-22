@@ -13,9 +13,8 @@ app.use(bodyParser.json({ type: '*/*'}));
 router(app);
 
 var port = process.env.PORT || 3000;
-
 var server = http.createServer(app);
 
 server.listen(port);
-console.log('Server hearing you on ' + port);
+console.log('Server listening on ' + port);
 
