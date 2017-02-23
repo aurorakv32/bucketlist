@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import NavBarHeader from './nav';
-import BandList from '../container/BandList';
+import Signin from './auth/signin';
 
 	export default class App extends Component {
   		render() {
     			return (
       				<div>
       					<NavBarHeader />
-                <BandList />
+                {this.props.children}
       				</div>
     			);
   		}
