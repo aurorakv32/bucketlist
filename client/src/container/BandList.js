@@ -11,24 +11,14 @@ class BandList extends Component {
 			);
 		});
 	}
-	renderImage(){
-		return this.props.image.map((image) =>{
-			return (
-				<img src={image.img} onClick={() => this.props.selectImage(image)}/>
-			);
-		});
-	}
+
 	render() {
 		return (
 			<div>
 			<ul className="list-group col-sm-4">
 				{this.renderList()}
 			</ul>
-			
-			<h1>Details for:</h1>
-			<ul>
-				{this.renderImage()}
-			</ul>
+
 			</div>
 		);
 	};
@@ -40,7 +30,6 @@ class BandList extends Component {
 function mapStateToProps(state){
 	return {
 		bands: state.bands,
-		image: state.image
 	};
 }
 
