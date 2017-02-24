@@ -12,7 +12,7 @@ class SearchBar extends Component {
 				<label className="vidSearchLbl">
 					Get Inspired:
 				</label>
-				<input value = {this.state.term} onChange = {{event} => this.onInputChange(event.target.value) } />
+				<input value = {this.state.term} onChange = {(event) => this.onInputChange(event.target.value) } />
 			</div>
 		);
 	}

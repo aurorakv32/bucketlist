@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './search-bar';
-import VideoDetail from './video-detail';
+import VideoDetail from './video-details';
 
 const API_KEY = 'AIzaSyBb_sCeBfqhQUwk7IsTy2Q4fN9WAEzlBRs';
 
