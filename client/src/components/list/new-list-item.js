@@ -33,7 +33,7 @@ class ListItem extends Component {
 
 				<fieldset className="form-group">
 					<label>Content</label>
-					<input type="text" className="form-control" {...content} />
+					<textarea type="text" className="form-control" {...content} />
 				</fieldset>
 
 				<button type="submit" className="btn btn-primary">Submit</button>
