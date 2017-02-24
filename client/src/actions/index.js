@@ -2,6 +2,7 @@ import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { AUTH_USER, UNAUTH_USER, AUTH_ERROR } from './types';
 import authReducer from '../reducers/auth_reducer';
+import Signout from '../components/auth/signout';
 
 // const ROOT_URL = 'http://rest.learncode.academy/api/aurora';
 const ROOT_URL = 'http://localhost:3000';
@@ -30,4 +31,13 @@ export function authError(error) {
 		type: AUTH_ERROR,
 		payload: error
 	};
+}
+
+//purpose of type is to catch unauth_user case.
+//flips auth flag to false & there won't be any links associated with them
+//other thing to do is get rid of token.
+export function signoutUser(){
+	localStorage.removeItem('token');
+
+	return {type: UNAUTH_USER};
 }
