@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { browserHistory } from 'react-router';
 
 // const ROOT_URL = 'http://rest.learncode.academy/api/aurora';
 const ROOT_URL = 'http://localhost:3000';
@@ -16,5 +17,10 @@ export function createPost(props) {
 export function signinUser ({ email, password }){
 	return function(dispatch){
 		axios.post(`${ROOT_URL}/signin`, {email, password})
+			.then(response => {
+				browserHistory.push('/newitem');
+		})
+			.catch(() => {
+		});
 	}
 }
